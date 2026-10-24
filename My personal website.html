@@ -1,0 +1,697 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>John Cedrick | Personal Website</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FAF4F1;
+            color: #4A2630;
+            text-align: center;
+        }
+
+        /* WELCOME PAGE */
+
+        .home {
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    rgba(101, 13, 40, 0.85),
+                    rgba(74, 11, 32, 0.92)
+                ),
+                url("computer.png");
+
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            padding: 40px 20px;
+        }
+
+        .home h1 {
+            font-size: 32px;
+            color: #D4AF37;
+        }
+
+        .home h2 {
+            color: #FFF0D6;
+        }
+
+        .home p {
+            max-width: 450px;
+            color: #FFF8F2;
+        }
+
+        .enter-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+
+            background-color: #D4AF37;
+            color: #4A0B20;
+
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+
+            box-shadow: 0 4px 12px
+                        rgba(0, 0, 0, 0.20);
+        }
+
+        .enter-btn:hover {
+            background-color: #E7C65C;
+        }
+
+        /* PROFILE HEADER */
+
+        header {
+            background-color: #650D28;
+            padding: 50px 20px;
+        }
+
+        /* JCL LOGO */
+
+        .my-logo {
+            display: block;
+            width: 150px;
+            max-width: 90%;
+            height: auto;
+
+            margin: 0 auto 25px;
+
+            border-radius: 15px;
+            border: 3px solid #D4AF37;
+
+            box-shadow: 0 0 15px
+                        rgba(212, 175, 55, 0.30);
+        }
+
+        /* PROFILE PICTURE */
+
+        .profile {
+            display: block;
+            width: 220px;
+            height: 260px;
+            max-width: 90%;
+
+            margin: 0 auto 25px;
+
+            border-radius: 15px;
+            object-fit: cover;
+            border: 4px solid #D4AF37;
+
+            box-shadow: 0 0 20px
+                        rgba(212, 175, 55, 0.30);
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            color: #650D28;
+        }
+
+        header h1 {
+            color: #D4AF37;
+        }
+
+        header p {
+            color: #FFF8F2;
+        }
+
+        .subtitle {
+            color: #F1DDA3;
+        }
+
+        /* WEBSITE SECTIONS */
+
+        section {
+            background-color: #FFF8F2;
+
+            margin: 20px;
+            padding: 25px;
+
+            border-radius: 15px;
+            border: 1px solid #D8B7BE;
+
+            box-shadow: 0 4px 15px
+                        rgba(101, 13, 40, 0.10);
+        }
+
+        h2 {
+            color: #650D28;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        /* CLICKABLE SECTIONS */
+
+        summary {
+            color: #650D28;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            list-style-position: inside;
+        }
+
+        details p {
+            color: #4A2630;
+            line-height: 1.7;
+        }
+
+        /* MY HOBBIES PHOTOS */
+
+        .hobby-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .hobby-gallery img {
+            width: 100%;
+            height: 160px;
+
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #D4AF37;
+
+            box-shadow: 0 3px 10px
+                        rgba(101, 13, 40, 0.15);
+        }
+
+        /* MY BEST WORK */
+
+        .best-work-item {
+            margin-top: 25px;
+            padding: 15px;
+
+            background-color: #F8E9E7;
+            border: 1px solid #D8B7BE;
+            border-radius: 12px;
+        }
+
+        .best-work-item h2 {
+            font-size: 20px;
+            color: #650D28;
+        }
+
+        .best-work-photo {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+
+            margin: 20px auto;
+
+            border-radius: 12px;
+            border: 3px solid #D4AF37;
+
+            box-shadow: 0 3px 10px
+                        rgba(101, 13, 40, 0.15);
+        }
+
+        .best-work-description {
+            text-align: left;
+            max-width: 650px;
+            margin: 20px auto 0;
+        }
+
+        /* MY ACHIEVEMENT PHOTO */
+
+        .achievement-photo {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+
+            margin: 20px auto 0;
+
+            border-radius: 12px;
+            border: 3px solid #D4AF37;
+
+            box-shadow: 0 0 15px
+                        rgba(212, 175, 55, 0.25);
+        }
+
+        /* FACEBOOK LINK */
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+
+            background-color: #650D28;
+            color: #FFF8F2;
+
+            text-decoration: none;
+            padding: 12px 25px;
+
+            border-radius: 25px;
+            font-weight: bold;
+
+            box-shadow: 0 4px 12px
+                        rgba(101, 13, 40, 0.20);
+        }
+
+        .social-links a:hover {
+            background-color: #8C2041;
+        }
+
+        /* FOOTER */
+
+        footer {
+            color: #7C4B58;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- WELCOME PAGE -->
+
+    <div class="home" id="home">
+
+        <h1>Welcome to My Website!</h1>
+
+        <h2>Hello, I'm John Cedrick!</h2>
+
+        <p>
+            Welcome to my personal website.
+            Get to know more about me,
+            my hobbies, and my interests.
+        </p>
+
+        <a href="#main" class="enter-btn">
+            Explore My Website ↓
+        </a>
+
+    </div>
+
+
+    <!-- PROFILE HEADER -->
+
+    <header id="main">
+
+        <img src="jcllogo.jpeg"
+             alt="JCL Logo"
+             class="my-logo">
+
+        <img src="profile.jpeg"
+             alt="My Profile Picture"
+             class="profile">
+
+        <h1>John Cedrick Lacaña</h1>
+
+        <p class="subtitle">
+            Student | Future Web Developer
+        </p>
+
+        <p>Welcome to my personal website!</p>
+
+    </header>
+
+
+    <!-- ABOUT ME -->
+
+    <section>
+
+        <h2>👋 About Me</h2>
+
+        <p>
+            Hello! I'm John Cedrick Lacaña,
+            an ICT student who is currently
+            learning HTML, C++, and basic web
+            development. I enjoy cycling and
+            exploring new things about technology.
+            Although I am still developing my
+            skills, I am determined to improve
+            through practice and learning.
+            This website showcases my experiences,
+            creative projects, and journey
+            as a student.
+        </p>
+
+    </section>
+
+
+    <!-- MY LIFE STORY -->
+
+    <section>
+
+        <details>
+
+            <summary>📖 My Life Story</summary>
+
+            <p>
+                My life is not perfect, but I try to be
+                better every day. I am currently a student
+                taking ICT, but until now I still don't
+                know what I really want to be because
+                I still don't know what my talent and
+                skills are.
+            </p>
+
+            <p>
+                To be honest, when I was still in Junior
+                High School, I really didn't know what
+                strand I would take in Grade 11. I ended
+                up choosing ICT even though I don't know
+                much about computers except playing
+                online games.
+            </p>
+
+            <p>
+                Now that I am in ICT, I try to search
+                and study our lessons like C++ and HTML,
+                but it's really hard for me to understand.
+                Even though it's difficult, I still do
+                what I can to pass our activities in
+                coding so I won't fail.
+            </p>
+
+            <p>
+                I have experienced many failures and
+                disappointments, but instead of giving up,
+                I used them as a lesson to correct my
+                mistakes. I know that life is not always
+                easy, but I need to keep going.
+            </p>
+
+            <p>
+                My family is my motivation. They are the
+                reason why I want to be successful.
+                Right now, I am still in the process
+                of finding myself and what I really
+                want to be in life. I haven't proven
+                anything yet, but I will do everything
+                I can to make my family proud.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- MY HOBBIES -->
+
+    <section>
+
+        <details>
+
+            <summary>🚴 My Hobbies & Photos</summary>
+
+            <p>
+                I enjoy cycling and riding my
+                bicycle during my free time.
+            </p>
+
+            <div class="hobby-gallery">
+
+                <img src="bike1.jpeg"
+                     alt="My Cycling Photo 1">
+
+                <img src="bike2.jpeg"
+                     alt="My Cycling Photo 2">
+
+                <img src="bike3.jpeg"
+                     alt="My Cycling Photo 3">
+
+                <img src="bike4.jpeg"
+                     alt="My Cycling Photo 4">
+
+                <img src="bike5.jpeg"
+                     alt="My Cycling Photo 5">
+
+                <img src="bike6.jpeg"
+                     alt="My Cycling Photo 6">
+
+                <img src="bike7.jpeg"
+                     alt="My Cycling Photo 7">
+
+                <img src="bike8.jpeg"
+                     alt="My Cycling Photo 8">
+
+            </div>
+
+        </details>
+
+    </section>
+
+
+    <!-- MY BEST WORK -->
+
+    <section>
+
+        <details>
+
+            <summary>🎨 My Best Work</summary>
+
+            <!-- FIRST BEST WORK -->
+
+            <div class="best-work-item">
+
+                <h2>
+                    1. BUY WISELY TO SAVE MORE
+                </h2>
+
+                <img src="bestwork1.jpeg"
+                     alt="My Grade 9 T-shirt Design"
+                     class="best-work-photo">
+
+                <p class="best-work-description">
+                    My best work is this T-shirt
+                    design titled "BUY WISELY TO
+                    SAVE MORE" which I made for
+                    our AP Performance Task when
+                    I was in Grade 9. I chose
+                    this because I put all my
+                    effort into drawing and
+                    coloring it by hand. It shows
+                    different market sections
+                    like Karne, Bigasan, and
+                    Prutas to represent wise
+                    buying in real life. This is
+                    my best work because it shows
+                    my creativity, effort, and
+                    the lesson I learned.
+                </p>
+
+            </div>
+
+            <!-- SECOND BEST WORK -->
+
+            <div class="best-work-item">
+
+                <h2>
+                    2. Building Concrete Model
+                </h2>
+
+                <img src="bestwork2.jpeg"
+                     alt="My Grade 10 Building Model"
+                     class="best-work-photo">
+
+                <p class="best-work-description">
+                    My second best work is this
+                    building concrete model
+                    that I made when I was in
+                    Grade 10 using clay and
+                    wooden sticks. I made the
+                    foundation using clay to
+                    represent concrete and used
+                    small wooden sticks for
+                    the steel framework.
+                    I chose this as one of my
+                    best works because it took
+                    a lot of patience and careful
+                    work to build. This project
+                    helped me understand the
+                    basic structure of a building
+                    and how important strong
+                    foundations are. It shows
+                    my effort and creativity in
+                    turning a simple idea into
+                    a real model.
+                </p>
+
+            </div>
+
+        </details>
+
+    </section>
+
+
+    <!-- MY ACHIEVEMENT -->
+
+    <section>
+
+        <details>
+
+            <summary>🏆 My Achievement</summary>
+
+            <img src="achievement.jpeg"
+                 alt="My Achievement Certificate"
+                 class="achievement-photo">
+
+        </details>
+
+    </section>
+
+
+    <!-- TESTIMONIALS -->
+
+    <section>
+
+        <details>
+
+            <summary>💬 Testimonials</summary>
+
+            <p>
+                "Maingay at makulit sa klase,
+                ngunit nakasasagot kapag
+                tinanong sa recitation."
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- MY BLOG -->
+
+    <section>
+
+        <details>
+
+            <summary>📝 My Blog</summary>
+
+            <h2>
+                ICT Student Who Started With Nothing
+            </h2>
+
+            <p>
+                When I started in ICT, I honestly
+                knew nothing about computers except
+                playing online games. I didn't even
+                know what strand to take back in
+                Junior High School. I chose ICT
+                because I was curious, not because
+                I was good at it.
+            </p>
+
+            <p>
+                At first, learning C++ and HTML
+                was really hard. I got confused
+                many times and I failed in some
+                activities. But I realized that
+                you don't need to be good at the
+                start. You just need to keep
+                searching, keep practicing,
+                and keep trying.
+            </p>
+
+            <p>
+                My philosophy is simple: it's
+                okay to start from zero. What
+                matters is that you don't stop.
+                Now, I'm still learning basic
+                coding and creating simple
+                web pages.
+            </p>
+
+            <p>
+                This blog will be my space to
+                share my journey as an ICT
+                student — the lessons, the
+                struggles, and the small wins.
+            </p>
+
+        </details>
+
+    </section>
+
+
+    <!-- WHERE TO FIND ME ONLINE -->
+
+    <section>
+
+        <details>
+
+            <summary>
+                🌐 Where to Find Me Online
+            </summary>
+
+            <p>
+                You can find me on Facebook.
+                Click the button below to visit
+                my Facebook profile.
+            </p>
+
+            <div class="social-links">
+
+                <a href="https://www.facebook.com/share/19yMrztBmL/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Visit My Facebook Profile
+                </a>
+
+            </div>
+
+        </details>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>© 2026 John Cedrick Lacaña</p>
+
+    </footer>
+
+</body>
+</html>
+
+
+
+        
+
+            
+
+        
